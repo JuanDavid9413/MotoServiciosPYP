@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="MotoServicios.Menu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>MotoServicios P&P</title>
+    <style type="text/css">
+        #ContenedorPrincipal {
+        margin-left:auto;
+        margin-right:auto;
+        width:80%;
+        border:3px;
+        position:relative;
+        }
+        #Header {
+        background-color:#292828;
+        }
+        #Mensaje {
+        background-color:#292828;
+        }
+        #MensajeCoorporativo {
+        font-family:Arial;
+        font-size:15px;
+        color:white;
+        text-align:right;
+        }
+        #Redes {
+        
+        }
+        .ImageIco {
+        width:50PX;
+        height:50px;
+        }
+        .ImageIco:hover {
+            background-color:white;
+        }
+        .auto-style1 {
+            width: 335px;
+        }
+        .auto-style2 {
+            width: 363px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="ContenedorPrincipal">
+        <div id="Header">
+            <table>
+                <tr>
+                    <td class="auto-style1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="Inicio.aspx"><asp:Image ID="Image1" runat="server" ImageUrl="~/Imagenes/LOGO.png" Width="150px" /></a>
+                    </td>
+                    <td class="auto-style2">
+                        <asp:Label ID="lblNomCompany" runat="server" Text="MotosServicios P&amp;P" BackColor="#292828" Font-Names="Arial" Font-Size="40px" ForeColor="White"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <div id="Footer">
+            <div id="Mensaje">
+                <span>
+                    <table id="Redes">
+                    <tr>
+                        <td>
+                            <asp:ImageButton CLASS="ImageIco" runat="server" ImageUrl="~/Imagenes/Facebook.png" />
+                        </td>
+                        <td>
+                            <asp:ImageButton CLASS="ImageIco" runat="server" ImageUrl="~/Imagenes/twitter.png" />
+                        </td>
+                        <td>
+                            <asp:ImageButton CLASS="ImageIco" runat="server" ImageUrl="~/Imagenes/link.png" />
+                        </td>
+                    </tr>
+                </table>
+                
+                </span>
+                    <p id="MensajeCoorporativo">
+                    Un desarrollo de OrinigateSoft
+                    <br />
+                    Todos los derechos reservados
+                </p>               
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
